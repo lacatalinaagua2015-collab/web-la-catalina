@@ -176,7 +176,30 @@
   .galeria-img:hover { transform: scale(1.02); box-shadow: 0 16px 50px rgba(0,119,182,0.25); }
   .galeria-img img { width: 100%; height: 380px; object-fit: cover; display: block; }
 
-  /* PEDIDO */
+  /* NUEVOS CLIENTES */
+  .nuevos-section { padding: 80px 32px; background: linear-gradient(135deg, #fff7ed 0%, #fef3c7 100%); }
+  .nuevos-inner { max-width: 1100px; margin: 0 auto; }
+  .promo-badge-top { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #f59e0b, #ef4444); color: white; padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; margin-bottom: 20px; letter-spacing: 0.05em; text-transform: uppercase; }
+  .promo-card {
+    background: white; border-radius: 32px; padding: 48px 40px;
+    box-shadow: 0 8px 60px rgba(245,158,11,0.15); border: 2px solid #f59e0b;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+    margin-top: 40px;
+  }
+  @media(max-width:700px){ .promo-card{grid-template-columns:1fr;gap:32px;padding:32px 20px;} }
+  .promo-precio-grande { font-family: 'Playfair Display', serif; font-size: 80px; font-weight: 900; color: #ef4444; line-height: 1; }
+  .promo-precio-grande span { font-size: 36px; font-weight: 400; vertical-align: top; margin-top: 12px; display: inline-block; }
+  .promo-incluye { margin-top: 24px; }
+  .promo-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #fef3c7; font-size: 16px; color: #374151; }
+  .promo-item:last-child { border-bottom: none; }
+  .promo-item .ico { font-size: 24px; flex-shrink: 0; }
+  .promo-nota { background: #fef3c7; border-left: 4px solid #f59e0b; border-radius: 12px; padding: 16px 20px; margin-top: 24px; font-size: 14px; color: #92400e; line-height: 1.6; }
+  .promo-nota strong { color: #78350f; }
+  .btn-promo { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #f59e0b, #ef4444); color: white; padding: 18px 36px; border-radius: 50px; font-size: 17px; font-weight: 700; text-decoration: none; margin-top: 32px; transition: all 0.2s; box-shadow: 0 8px 30px rgba(239,68,68,0.3); border: none; cursor: pointer; width: 100%; justify-content: center; }
+  .btn-promo:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(239,68,68,0.4); }
+  .solo-nuevos { display: inline-block; background: #ef4444; color: white; padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; margin-bottom: 16px; }
+
+  /* PEDIDO mejorado */
   .pedido-section { padding: 80px 32px; max-width: 800px; margin: 0 auto; text-align: center; }
   .form-card { background: white; border-radius: 32px; padding: 48px 40px; box-shadow: 0 8px 60px rgba(0,119,182,0.1); border: 1px solid rgba(0,180,216,0.15); }
   .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
@@ -225,6 +248,7 @@
       <a href="https://www.facebook.com/lacatalinatucuman2015/" class="social-btn social-fb" target="_blank" title="Facebook">f</a>
       <a href="https://www.instagram.com/lacatalinasodayagua2015/" class="social-btn social-ig" target="_blank" title="Instagram">📷</a>
     </div>
+    <a href="#nuevos-clientes" class="nav-wa" style="background:linear-gradient(135deg,#f59e0b,#ef4444);margin-right:4px;">🎁 Promo Nuevos</a>
     <a href="https://wa.me/543816040339?text=Hola!%20Quiero%20pedir%20agua" class="nav-wa" target="_blank">💬 Pedir ahora</a>
   </div>
 </nav>
@@ -394,6 +418,42 @@
 
 </div>
 
+<!-- NUEVOS CLIENTES -->
+<section class="nuevos-section" id="nuevos-clientes">
+  <div class="nuevos-inner">
+    <div class="promo-badge-top">🎁 Promoción exclusiva</div>
+    <h2 class="section-title">¿Primera vez con nosotros?<br><span style="color:#f59e0b;">Tenemos una promo especial</span></h2>
+    <p class="section-sub">Para que arranqués a disfrutar del agua pura sin gastar de más.</p>
+
+    <div class="promo-card">
+      <div>
+        <div class="solo-nuevos">⭐ Solo para nuevos clientes</div>
+        <div class="promo-precio-grande"><span>$</span>2.000</div>
+        <p style="color:var(--gray);font-size:15px;margin-top:8px;">Precio de lanzamiento, por única vez</p>
+        <div class="promo-incluye">
+          <div class="promo-item"><span class="ico">🫧</span><div><strong>2 Sifones de 1,5L</strong><br><span style="color:var(--gray);font-size:14px;">Agua gasificada, fresca y lista para servir</span></div></div>
+          <div class="promo-item"><span class="ico">💧</span><div><strong>1 Bidón de agua 10L</strong><br><span style="color:var(--gray);font-size:14px;">Agua purificada tratada</span></div></div>
+          <div class="promo-item"><span class="ico">🚚</span><div><strong>Envío a domicilio incluido</strong><br><span style="color:var(--gray);font-size:14px;">Sin costo adicional en tu zona</span></div></div>
+        </div>
+        <div class="promo-nota">
+          <strong>📦 Envases y dispenser retornables</strong><br>
+          Los sifones, bidones y el dispenser son <strong>prestados</strong>. Al momento de la entrega te dejamos el equipo y al siguiente pedido hacemos el cambio. ¡No pagás nada extra por el equipo!
+        </div>
+        <button class="btn-promo" onclick="pedirPromo()">💬 Quiero esta promo por WhatsApp</button>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:120px;line-height:1;">🫧💧</div>
+        <div style="margin-top:24px;background:linear-gradient(135deg,#fef3c7,#fde68a);border-radius:20px;padding:24px;">
+          <div style="font-size:14px;color:#92400e;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;">Ahorrás</div>
+          <div style="font-family:'Playfair Display',serif;font-size:48px;font-weight:900;color:#78350f;">$1.500</div>
+          <div style="font-size:13px;color:#92400e;">vs precio normal ($3.500)</div>
+        </div>
+        <p style="color:var(--gray);font-size:13px;margin-top:16px;">* Válido para el primer pedido. Una vez por cliente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PEDIDO -->
 <section class="pedido-section" id="pedido">
   <div class="section-label">Hacé tu pedido</div>
@@ -406,11 +466,19 @@
       <input class="form-input" type="text" id="dir" placeholder="Tu dirección" />
       <select class="form-input" id="prod" style="background:white;">
         <option value="">¿Qué necesitás?</option>
+        <option>🎁 PROMO NUEVOS CLIENTES – 2 Sifones + Bidón 10L – $2.000</option>
         <option>Bidón 20L – $5.500</option>
         <option>Bidón 10L – $2.800</option>
         <option>Sifón 1,5L – $900</option>
         <option>Bidón 20L + Sifón</option>
         <option>Consulta / Otro</option>
+      </select>
+      <select class="form-input" id="horario" style="background:white;">
+        <option value="">Horario preferido de entrega</option>
+        <option>Mañana (8:00 – 11:00)</option>
+        <option>Mediodía (11:00 – 13:00)</option>
+        <option>Tarde (13:00 – 15:00)</option>
+        <option>Cualquier horario</option>
       </select>
       <textarea class="form-input" id="obs" placeholder="Cantidad, observaciones..."></textarea>
     </div>
@@ -439,6 +507,7 @@ function enviarWA(){
   const tel = document.getElementById('tel').value.trim();
   const dir = document.getElementById('dir').value.trim();
   const prod = document.getElementById('prod').value;
+  const horario = document.getElementById('horario').value;
   const obs = document.getElementById('obs').value.trim();
   if(!nombre||!dir||!prod){alert('Completá al menos tu nombre, dirección y producto.');return;}
   let msg = '🌊 *Pedido La Catalina*\n\n';
@@ -446,7 +515,12 @@ function enviarWA(){
   if(tel) msg += '📱 Teléfono: ' + tel + '\n';
   msg += '📍 Dirección: ' + dir + '\n';
   msg += '💧 Producto: ' + prod + '\n';
+  if(horario) msg += '🕐 Horario preferido: ' + horario + '\n';
   if(obs) msg += '📝 Observaciones: ' + obs;
+  window.open('https://wa.me/543816040339?text=' + encodeURIComponent(msg), '_blank');
+}
+function pedirPromo(){
+  const msg = '🎁 *Quiero la PROMO NUEVOS CLIENTES*\n\n✅ 2 Sifones 1,5L + 1 Bidón 10L = $2.000\n\nPor favor, ¿me confirman disponibilidad y día de entrega? ¡Gracias!';
   window.open('https://wa.me/543816040339?text=' + encodeURIComponent(msg), '_blank');
 }
 </script>
